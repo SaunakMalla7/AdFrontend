@@ -75,6 +75,12 @@ const Slider = () => {
               <span className="links_name">Add Offer</span>
             </a>
           </li>
+          <li>
+            <a href="/damage-request-view">
+              <i className="bx bx-heart"></i>
+              <span className="links_name">Damage Request</span>
+            </a>
+          </li>
 
           <li>
             <a href="#">

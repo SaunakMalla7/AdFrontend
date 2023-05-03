@@ -2,10 +2,6 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import HeroPages from '../components/HeroPages';
 
-const handleDamageRequest = () => {
-  // redirect to damage request page
-};
-
 function Bill({ paymentData }) {
   const rent = paymentData.rent ?? {};
   const vehicle = rent.vehicle ?? {};
@@ -16,6 +12,11 @@ function Bill({ paymentData }) {
   const totalAmount = paymentData.totalAmount ?? 0;
   const isPaid = paymentData.isPaid ?? false;
   const hasDamageRequest = paymentData.hasDamageRequest ?? false;
+
+  const handleDamageRequest = () => {
+    window.localStorage.setItem('damagerentid', rent.id);
+    window.location.href = `/damage-request`;
+  };
 
   return (
     <>
@@ -41,8 +42,8 @@ function Bill({ paymentData }) {
             <h3>Total Amount: {totalAmount}</h3>
             <h3>Approved By: {staff.userName ?? '-'}</h3>
 
-            <button className="btn btn-danger" onClick={handleDamageRequest}>
-              Damage Request
+            <button onClick={handleDamageRequest}>
+              Do you have any damage?
             </button>
           </div>
         </div>

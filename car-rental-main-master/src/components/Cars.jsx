@@ -7,7 +7,7 @@ import { Row } from 'react-bootstrap';
 const Cars = (props) => {
   const { product } = props;
   return (
-    <section className="models-section" key={product.id}>
+    <section className="models-section" key={product.id}> 
       <div className="container">
         <div className="models-div">
           <div className="models-div__box">

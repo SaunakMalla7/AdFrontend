@@ -31,6 +31,11 @@ import UserRentDetails from './Pages/UserRentDetail';
 import Payment from './Pages/Payment';
 import RentalPayments from './Pages/Admin/ViewPayments';
 import ImageUpload from './Pages/VehicleImageUploadPage';
+import AddDamageRequest from './Pages/AddDamageRequest';
+import VerifyDamage from './Pages/Admin/VerifyDamage';
+import DamageRequestsPage from './Pages/DamageRequestsPage';
+import UserDamageRequestsPage from './Pages/UserDamageRequestsPage';
+import PayDamage from './Pages/PayDamage';
 
 function App() {
   // const [loggedIn, setLoggedIn] = useState(false);
@@ -74,6 +79,14 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/rental-payments" element={<RentalPayments />} />
         <Route path="/upload-image" element={<ImageUpload />} />
+        <Route path="/damage-request" element={<AddDamageRequest />} />
+        <Route path="/damage-request-view" element={<DamageRequestsPage />} />
+        <Route
+          path="/user-damage-request-view"
+          element={<UserDamageRequestsPage />}
+        />
+        <Route path="/verify/:id" element={<VerifyDamage />} />
+        <Route path="/pay/:id" element={<PayDamage />} />
       </Routes>
     </>
   );
